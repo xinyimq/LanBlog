@@ -458,30 +458,6 @@ definitions:
         format: int64
       name:
         type: string
-  models.Object:
-    title: Object
-    type: object
-    properties:
-      ObjectId:
-        type: string
-      PlayerName:
-        type: string
-      Score:
-        type: integer
-        format: int64
-  models.Profile:
-    title: Profile
-    type: object
-    properties:
-      Address:
-        type: string
-      Age:
-        type: integer
-        format: int64
-      Email:
-        type: string
-      Gender:
-        type: string
   models.Topic:
     title: Topic
     type: object
@@ -530,18 +506,6 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/models.Topic'
-  models.User:
-    title: User
-    type: object
-    properties:
-      Id:
-        type: string
-      Password:
-        type: string
-      Profile:
-        $ref: '#/definitions/models.Profile'
-      Username:
-        type: string
 tags:
 - name: topic
   description: |
