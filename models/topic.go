@@ -39,7 +39,7 @@ type Topic struct {
 	Attachment      string    `json:"url" orm:"column(attachment);size(255)"`
 	Category        *Category `json:"cate" orm:"rel(fk);on_delete(do_nothing)"`
 	Labels          []*Label  `json:"labels" orm:"rel(m2m)"`
-	Created         time.Time `json:"-" orm:"auto_now_add;column(created);type(datetime)"`
+	Created         time.Time `orm:"auto_now_add;column(created);type(datetime)"`
 	Updated         time.Time `json:"-" orm:"auto_now;column(updated);type(datetime)"`
 	Deleted         time.Time `json:"-" orm:"auto_now;column(deleted);type(datetime)"`
 	Views           int64     `json:"views" orm:"column(views)"`
