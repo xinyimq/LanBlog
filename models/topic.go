@@ -34,7 +34,7 @@ type Topic struct {
 	Id              int       `json:"id" orm:"column(id);auto"`
 	Uid             int64     `json:"uid" orm:"column(uid)"`
 	Title           string    `json:"title" orm:"column(title);size(255)"`
-	Content         string    `json:"content" orm:"column(content);size(5000)"`
+	Content         string    `json:"content" orm:"column(content);type(text)"`
 	Summary         string    `json:"summary" orm:"column(summary);size(200)"`
 	Attachment      string    `json:"url" orm:"column(attachment);size(255)"`
 	Category        *Category `json:"cate" orm:"rel(fk);on_delete(do_nothing)"`
