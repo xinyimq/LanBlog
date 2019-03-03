@@ -1,14 +1,12 @@
 // @APIVersion 1.0.0
 // @Title beego Test API
-// @Description beego has a very cool tools to autogenerate documents for your API
-// @Contact astaxie@gmail.com
-// @TermsOfServiceUrl http://beego.me/
+// @Description 配置路由地址
 // @License Apache 2.0
 // @LicenseUrl http://www.apache.org/licenses/LICENSE-2.0.html
 package routers
 
 import (
-	"MyBlog/controllers"
+	"LanBlog/controllers"
 
 	"github.com/astaxie/beego"
 )
@@ -38,5 +36,5 @@ func init() {
 		),
 	)
 	beego.AddNamespace(ns)
-	beego.Router("/", &controllers.HomeController{})
+
 }

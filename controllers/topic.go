@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"MyBlog/models"
+	"LanBlog/models"
 	"encoding/json"
 	"errors"
 	"strconv"
