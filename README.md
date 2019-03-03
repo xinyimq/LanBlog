@@ -34,7 +34,7 @@
 ### 安装&使用
 > 以Ubuntu为例
 
-#### 手动编译安装
+### 手动编译安装
 **Step1 安装mysql**
 
 ```shell
@@ -61,18 +61,84 @@ sudo apt install mysql-server mysql-common mysql-client
  sudo apt install nginx
 ```
 
-**Step3 克隆项目**
-> 拷贝项目到你指定的目录下,这里选择 /var/www/
-> 没有安装git 需要先安装git  sudo apt install git
+**Step 3 安装编译环境**
+> 若提示没有权限,请以root身份运行
 
-``` 
-	cd /var/www/
-	git clone https://github.com/sinksmell/LanBlog.git
-```
-**Step 4 安装编译环境**
+* 下载并安装go语言,配置环境变量
 
-```
-	cd /usr/local
-	wget https://studygolang.com/dl/golang/go1.12.linux-amd64.tar.gz
+
+``` shell
+cd /usr/local
+wget https://studygolang.com/dl/golang/go1.12.linux-amd64.tar.gz
+
+tar zxvf  go1.12.linux-amd64.tar.gz
+
+echo 'export GOROOT=/usr/local/go' >> ~/.bashrc 
+
+echo 'export GOPATH=/var/www' >> ~/.bashrc 
+echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc 
+
+source ~/.bashrc
 	
 ``` 
+
+* 查看是否安装成功
+> 输入go version查看go版本 输入go 查看命令提示
+
+
+	go version
+	go 
+
+如果出现以下提示,则安装成功
+
+![](https://i.loli.net/2019/03/03/5c7b8034bbdc4.png)
+
+* 克隆项目到本地 
+
+``` shell
+
+cd /var/www
+
+mkdir src
+
+cd src
+
+git clone https://github.com/sinksmell/LanBlog.git
+
+```
+
+* 安装依赖
+
+``` 
+
+go get github.com/astaxie/beego
+
+go get  github.com/beego/bee
+
+go get github.com/dgrijalva/jwt-go
+
+go get github.com/go-sql-driver/mysql
+
+
+```
+
+**Step 3 安装编译环境**
+
+* 修改Nginx配置文件
+> 待补充
+
+* 运行项目 
+
+``` 
+sudo  service nginx start
+
+cd /var/www/src/LanBlog
+
+bee run 
+
+```
+
+* 运行效果图
+![](https://i.loli.net/2019/03/03/5c7b81c7e4722.png)
+
+* 访问80端口
