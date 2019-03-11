@@ -125,7 +125,75 @@ go get github.com/go-sql-driver/mysql
 **Step 3 安装编译环境**
 
 * 修改Nginx配置文件
-> 待补充
+
+> 后台管理 blogCMS.conf
+
+``` conf
+server {
+listen 8088;
+server_name localhost;
+charset utf-8;
+access_log /var/www/blogCMS.log  main;
+
+location / {
+  root /var/www/src/LanBlog/views;
+  index index.html;
+}
+
+location ~ /(script|image|img|js|fonts|css)/ {
+  expires 1d;
+  root /var/www/src/LanBlog/static/blogCMS ;
+}
+    location /api {
+            proxy_pass   http://localhost:8088/v1;
+            add_header Access-Control-Allow-Methods *;
+            add_header Access-Control-Max-Age 3600;
+            add_header Access-Control-Allow-Credentials true;
+            add_header Access-Control-Allow-Origin $http_origin;
+            add_header Access-Control-Allow-Headers $http_access_control_request_headers;
+
+            if ($request_method = OPTIONS ) {
+                return 200;
+            }
+        }
+
+}
+```
+
+> blog.conf
+
+``` conf
+server {
+    listen 80;
+    server_name localhost;
+    access_log /var/www/blog.log  main;
+
+    location / {
+        root /var/www/src/LanBlog/views ;
+        index home.html ;
+    }
+
+    location  ~ /(css|js|fonts|img|node_modules)/ {
+       # access_log off;
+        expires 1d;
+        root /var/www/src/LanBlog/static/blog ;
+    }
+
+    location /api {
+            proxy_pass   http://localhost:8088/v1;
+            add_header Access-Control-Allow-Methods *;
+            add_header Access-Control-Max-Age 3600;
+            add_header Access-Control-Allow-Credentials true;
+            add_header Access-Control-Allow-Origin $http_origin;
+            add_header Access-Control-Allow-Headers $http_access_control_request_headers;
+
+            if ($request_method = OPTIONS ) {
+                return 200;
+            }
+        }
+}
+
+```
 
 * 运行项目 
 
