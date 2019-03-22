@@ -1,13 +1,12 @@
 package models
 
 import (
+	"github.com/astaxie/beego"
 	"github.com/dgrijalva/jwt-go"
 	"time"
-	"github.com/astaxie/beego"
 )
 
 const key = "sinksmell"
-
 
 func GenToken() string {
 	claims := &jwt.StandardClaims{
@@ -24,14 +23,13 @@ func GenToken() string {
 	return ss
 }
 
-
 // 校验token是否有效
 func CheckToken(token string) bool {
 	_, err := jwt.Parse(token, func(*jwt.Token) (interface{}, error) {
 		return key, nil
 	})
 	if err != nil {
-		beego.BeeLogger.Info("parase with claims failed. %+v",err)
+		beego.BeeLogger.Info("parase with claims failed. %+v", err)
 		return false
 	}
 	return true

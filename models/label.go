@@ -1,11 +1,11 @@
 package models
 
 import (
-	"github.com/astaxie/beego/orm"
-	"strings"
-	"reflect"
-	"fmt"
 	"errors"
+	"fmt"
+	"github.com/astaxie/beego/orm"
+	"reflect"
+	"strings"
 )
 
 /**
@@ -28,13 +28,13 @@ type Label struct {
 	Topics []*Topic `json:"-" orm:"reverse(many)"`
 }
 
- */
+*/
 
 type Label struct {
-	Id          int    `json:"id"  orm:"column(id);auto"`
-	Name        string `json:"name"  orm:"column(name);size(100)"`
-	Description string `json:"desc"  orm:"column(description);size(500)"`
-	Topics []*Topic		`json:"-" orm:"reverse(many)"`
+	Id          int      `json:"id"  orm:"column(id);auto"`
+	Name        string   `json:"name"  orm:"column(name);size(100)"`
+	Description string   `json:"desc"  orm:"column(description);size(500)"`
+	Topics      []*Topic `json:"-" orm:"reverse(many)"`
 }
 
 func (t *Label) TableName() string {

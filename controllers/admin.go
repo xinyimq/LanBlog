@@ -1,9 +1,9 @@
 package controllers
 
 import (
+	"encoding/json"
 	"github.com/astaxie/beego"
 	"github.com/sinksmell/LanBlog/models"
-	"encoding/json"
 )
 
 type AdminController struct {
@@ -27,16 +27,16 @@ func (u *AdminController) Login() {
 	json.Unmarshal(u.Ctx.Input.RequestBody, &admin)
 	adminName := beego.AppConfig.String("adminName")
 	adminPWD := beego.AppConfig.String("adminPWD")
-	if admin.Name==adminName && admin.Password==adminPWD {
+	if admin.Name == adminName && admin.Password == adminPWD {
 		result.Code = 0
 		result.Msg = "OK"
 		result.Data.User = admin
 		result.Data.Token = models.GenToken()
-		result.Data.Name="管理员"
-		result.Data.UUId="sinksmell"
-	}else {
-		result.Code=100
-		result.Msg="用户名或密码错误!"
+		result.Data.Name = "管理员"
+		result.Data.UUId = "sinksmell"
+	} else {
+		result.Code = 100
+		result.Msg = "用户名或密码错误!"
 	}
 	u.Data["json"] = result
 	u.ServeJSON()

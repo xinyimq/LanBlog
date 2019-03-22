@@ -6,8 +6,7 @@ type LoginResult struct {
 	Data struct {
 		User  Admin  `json:"user"`
 		Token string `json:"token"`
-		Name string `json:"name"`
-		UUId string `json:"uuid"`
+		Name  string `json:"name"`
+		UUId  string `json:"uuid"`
 	} `json:"data"`
-
 }

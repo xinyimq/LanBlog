@@ -1,11 +1,11 @@
 package models
 
 import (
-	"time"
+	"errors"
+	"fmt"
 	"github.com/astaxie/beego/orm"
 	"strings"
-	"fmt"
-	"errors"
+	"time"
 )
 
 /**
@@ -28,7 +28,7 @@ type Label struct {
 	Topics []*Topic `json:"-" orm:"reverse(many)"`
 }
 
- */
+*/
 
 type Topic struct {
 	Id              int       `json:"id" orm:"column(id);auto"`
@@ -251,13 +251,13 @@ func DeleteTopic(id int) (err error) {
 	return
 }
 
-func FastFind(vagueName string) ([]*Topic,error) {
+func FastFind(vagueName string) ([]*Topic, error) {
 	var topics_title []*Topic
 	var topics_content []*Topic
 	o := orm.NewOrm()
 	qs := o.QueryTable("topic")
 	qs.Filter("title__contains", vagueName).All(&topics_title)
-	_,err:=qs.Filter("content__contains", vagueName).All(&topics_content)
+	_, err := qs.Filter("content__contains", vagueName).All(&topics_content)
 	topics := append(topics_title, topics_content...)
-	return topics,err
+	return topics, err
 }

@@ -6,8 +6,8 @@
 package routers
 
 import (
-	"github.com/sinksmell/LanBlog/controllers"
 	"github.com/astaxie/beego"
+	"github.com/sinksmell/LanBlog/controllers"
 )
 
 func init() {

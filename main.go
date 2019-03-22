@@ -1,24 +1,24 @@
 package main
 
 import (
-	_ "github.com/sinksmell/LanBlog/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"github.com/sinksmell/LanBlog/models"
 	"github.com/astaxie/beego/plugins/cors"
+	"github.com/sinksmell/LanBlog/models"
+	_ "github.com/sinksmell/LanBlog/routers"
 )
 
 func init() {
 	models.RegisterDB()
-	orm.Debug=false
-	orm.RunSyncdb("default",false,true)
+	orm.Debug = false
+	orm.RunSyncdb("default", false, true)
 }
 
 func main() {
 
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
 		AllowAllOrigins:  true,
-		AllowMethods:     []string{"GET", "POST","OPTIONS"},
+		AllowMethods:     []string{"GET", "POST", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Content-Type"},
 		ExposeHeaders:    []string{"Content-Length", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Content-Type"},
 		AllowCredentials: true,

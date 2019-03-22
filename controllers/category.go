@@ -1,12 +1,12 @@
 package controllers
 
 import (
-	"github.com/sinksmell/LanBlog/models"
 	"encoding/json"
 	"errors"
+	"github.com/astaxie/beego"
+	"github.com/sinksmell/LanBlog/models"
 	"strconv"
 	"strings"
-	"github.com/astaxie/beego"
 )
 
 // CategoryController operations for Category
