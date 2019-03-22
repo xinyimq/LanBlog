@@ -1,4 +1,9 @@
 ## LanBlog 一站式个人博客解决方案
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/sinksmell/LanBlog)](https://goreportcard.com/report/github.com/sinksmell/LanBlog)
+[![GoDoc](https://godoc.org/github.com/sinksmell/LanBlog?status.svg)](https://godoc.org/github.com/sinksmell/LanBlog)
+
+
 **感谢以下开源项目作者及参与者的无私奉献**
 > * [Beego](https://github.com/astaxie/beego/)
 > * [Vue](https://github.com/vuejs/vue)
