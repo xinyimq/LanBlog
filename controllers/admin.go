@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
-	"LanBlog/models"
+	"github.com/sinksmell/LanBlog/models"
 	"encoding/json"
 )
 

@@ -6,8 +6,7 @@
 package routers
 
 import (
-	"LanBlog/controllers"
-
+	"github.com/sinksmell/LanBlog/controllers"
 	"github.com/astaxie/beego"
 )
 

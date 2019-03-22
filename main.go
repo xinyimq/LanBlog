@@ -1,11 +1,10 @@
 package main
 
 import (
-	_ "LanBlog/routers"
-
+	_ "github.com/sinksmell/LanBlog/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
-	"LanBlog/models"
+	"github.com/sinksmell/LanBlog/models"
 	"github.com/astaxie/beego/plugins/cors"
 )
 

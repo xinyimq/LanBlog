@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-    beego.GlobalControllerRouter["LanBlog/controllers:AdminController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:AdminController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:AdminController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:AdminController"],
         beego.ControllerComments{
             Method: "Login",
             Router: `/login`,
@@ -16,7 +16,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:AdminController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:AdminController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:AdminController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:AdminController"],
         beego.ControllerComments{
             Method: "Options",
             Router: `/login`,
@@ -25,7 +25,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -34,7 +34,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"],
         beego.ControllerComments{
             Method: "Create",
             Router: `/create`,
@@ -43,7 +43,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/delete`,
@@ -52,7 +52,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/list`,
@@ -61,7 +61,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:CategoryController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:CategoryController"],
         beego.ControllerComments{
             Method: "Update",
             Router: `/update`,
@@ -70,7 +70,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:LabelController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -79,7 +79,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:LabelController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"],
         beego.ControllerComments{
             Method: "Create",
             Router: `/create`,
@@ -88,7 +88,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:LabelController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/delete`,
@@ -97,7 +97,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:LabelController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/list`,
@@ -106,7 +106,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:LabelController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:LabelController"],
         beego.ControllerComments{
             Method: "Update",
             Router: `/update`,
@@ -115,7 +115,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -124,7 +124,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "GetByCate",
             Router: `/cate/:id`,
@@ -133,7 +133,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "Create",
             Router: `/create`,
@@ -142,7 +142,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/delete`,
@@ -151,7 +151,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "GetByVagueName",
             Router: `/find/:vname`,
@@ -160,7 +160,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "GetByLabel",
             Router: `/label/:id`,
@@ -169,7 +169,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/list`,
@@ -178,7 +178,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["LanBlog/controllers:TopicController"],
+    beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"] = append(beego.GlobalControllerRouter["github.com/sinksmell/LanBlog/controllers:TopicController"],
         beego.ControllerComments{
             Method: "Update",
             Router: `/update`,

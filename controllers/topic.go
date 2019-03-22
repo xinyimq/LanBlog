@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"LanBlog/models"
+	"github.com/sinksmell/LanBlog/models"
 	"encoding/json"
 	"errors"
 	"strconv"
