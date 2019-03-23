@@ -3,7 +3,9 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/sinksmell/LanBlog)](https://goreportcard.com/report/github.com/sinksmell/LanBlog)
 [![GoDoc](https://godoc.org/github.com/sinksmell/LanBlog?status.svg)](https://godoc.org/github.com/sinksmell/LanBlog)
 [![Build Status](https://travis-ci.com/sinksmell/LanBlog.svg?branch=master)](https://travis-ci.com/sinksmell/LanBlog)
+![Build Status](https://img.shields.io/badge/language-go-green.svg)
 
+<a href="https://github.com/d2-projects/d2-admin" target="_blank"><img src="https://raw.githubusercontent.com/FairyEver/d2-admin/master/doc/image/d2-admin@2x.png" width="200"></a>
 
 **感谢以下开源项目作者及参与者的无私奉献**
 > * [Beego](https://github.com/astaxie/beego/)
@@ -42,6 +44,7 @@
 
 ### 简单部署
 > 下载对应的 压缩包 解压运行 具体步骤待补充...
+> 
 
 ### 手动编译安装
 **Step1 安装mysql**
