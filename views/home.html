@@ -55,7 +55,7 @@
                         并且提供一个博客管理后台,可以对博客网站内容进行管理,数据库为Mysql。
                     </mu-card-text>
                     <mu-card-actions class="button-wrapper">
-                        <mu-button small color="red">
+                        <mu-button small color="red" @click="location.href='https://sinksmell.github.io'">
                             Resume
                             <mu-icon right value="send"></mu-icon>
                         </mu-button>
@@ -113,13 +113,19 @@
                                 </mu-list-item-title>
                             </mu-list-item>
                             <mu-list-item button :ripple="false" slot="nested">
-                                <mu-list-item-title>网络载荷发生器</mu-list-item-title>
+                                <mu-list-item-title
+                                        @click="this.location.href='https://github.com/sinksmell/bee-crontab'">
+                                    分布式任务调度器
+                                </mu-list-item-title>
+                            </mu-list-item>
+                            <mu-list-item button :ripple="false" slot="nested">
+                                <mu-list-item-title
+                                        @click="this.location.href='https://github.com/sinksmell/MyLoadGen'">
+                                    网站压力生成器
+                                </mu-list-item-title>
                             </mu-list-item>
                             <mu-list-item button :ripple="false" slot="nested">
                                 <mu-list-item-title>仿Steam购物网站</mu-list-item-title>
-                            </mu-list-item>
-                            <mu-list-item button :ripple="false" slot="nested">
-                                <mu-list-item-title>OA办公系统</mu-list-item-title>
                             </mu-list-item>
                         </mu-list-item>
                         <mu-list-item button :ripple="false" nested :open="openList === 'tools'"
@@ -150,7 +156,7 @@
                              :key="index"
                              :color="tagColor()"
                              @click="getTopicsByTag(item.id)">
-                        {{item.name}}
+                    {{item.name}}
                     </mu-chip>
                 </mu-paper>
 
@@ -174,7 +180,7 @@
                     </mu-card-media>
                     <mu-card-title title="摘要" sub-title="Summary"></mu-card-title>
                     <mu-card-text>
-                        {{item.summary}}
+                    {{item.summary}}
                     </mu-card-text>
                     <mu-card-actions>
                         <mu-flex class="flex-wrapper" justify-content="center">
@@ -202,7 +208,7 @@
                 <mu-card class="topic-card">
                     <mu-card-header>
                         <mu-flex class="flex-wrapper" justify-content="center">
-                            <mu-card-title title="深入理解Vue SSR" sub-title="Content Title"></mu-card-title>
+                            <mu-card-title :title="readCard.title"></mu-card-title>
                             <!--<mu-flex class="flex-demo" justify-content="center" >center</mu-flex>-->
                         </mu-flex>
 
@@ -236,14 +242,15 @@
                         </mu-button>
                     </mu-tooltip>
                     <mu-tooltip placement="top" content="Github">
-                        <mu-button large icon color="success" @click="location.href='https://github.com/sinksmell/LanBlog'" >
+                        <mu-button large icon color="success"
+                                   @click="location.href='https://github.com/sinksmell/LanBlog'">
                             <mu-icon value="star"></mu-icon>
 
                         </mu-button>
                     </mu-tooltip>
 
                     <mu-tooltip placement="top" content="个人简历">
-                        <mu-button large icon color="red" @click="location.href='#'">
+                        <mu-button large icon color="red" @click="location.href='https://sinksmell.github.io'">
                             <mu-icon value="school"></mu-icon>
                         </mu-button>
                     </mu-tooltip>
@@ -286,7 +293,7 @@
         el: '#app',
         data() {
             return {
-             //   host: 'http://localhost:8088/v1/',
+                //   host: 'http://localhost:8088/v1/',
                 host: '/api/',
                 docked: false,
                 openList: '',
@@ -307,8 +314,9 @@
                 fastForm: {
                     keyWord: ''
                 },
-                readCard:{
-                    img:''
+                readCard: {
+                    img: '',
+                    title: ''
                 }
 
             }
@@ -359,7 +367,8 @@
                         let readCard = document.getElementById('content')
                         var jsObj = JSON.parse(ajaxObj.responseText);
                         readCard.innerHTML = marked(jsObj.content)
-                        me.readCard.img=jsObj.url
+                        me.readCard.img = jsObj.url
+                        me.readCard.title = jsObj.title
                         hljs.highlightBlock(readCard)
                     }
                 }
