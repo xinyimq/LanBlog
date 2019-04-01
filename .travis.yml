@@ -6,5 +6,4 @@ go:
 
 sudo: required
 
-script:
-  - go get -v
+
