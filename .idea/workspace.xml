@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec2957d6-dd8d-4b4b-9458-efe8c033c814" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.html" afterDir="false" />
-    </list>
+    <list default="true" id="ec2957d6-dd8d-4b4b-9458-efe8c033c814" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +175,7 @@
     <session id="402139401">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.opened" value="2" />
@@ -188,14 +186,14 @@
           <entry key="conf" value="13" />
           <entry key="gitattributes" value="4" />
           <entry key="go" value="7" />
-          <entry key="html" value="70" />
+          <entry key="html" value="105" />
           <entry key="yml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Go" value="7" />
-          <entry key="HTML" value="70" />
+          <entry key="HTML" value="105" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="YAML" value="42" />
         </counts>
@@ -265,8 +263,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="115" column="55" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
+            <state relative-caret-position="210">
+              <caret line="493" column="5" lean-forward="true" selection-start-line="493" selection-start-column="5" selection-end-line="493" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -401,11 +399,6 @@
               <item name="LanBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="LanBlog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LanBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LanBlog" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -426,16 +419,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/sql" />
+      <recent name="$PROJECT_DIR$/static/blogCMS" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/blog/img" />
       <recent name="$PROJECT_DIR$/static/blog/css" />
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/static/img" />
-      <recent name="$PROJECT_DIR$/static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sql" />
-      <recent name="$PROJECT_DIR$/static/blogCMS" />
       <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
@@ -478,7 +472,7 @@
     <frame x="0" y="0" width="1600" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12015504" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19250646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -491,7 +485,7 @@
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.3292232" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18865599" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.40443897" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -719,8 +713,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="115" column="55" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
+        <state relative-caret-position="210">
+          <caret line="493" column="5" lean-forward="true" selection-start-line="493" selection-start-column="5" selection-end-line="493" selection-end-column="5" />
         </state>
       </provider>
     </entry>
