@@ -8,28 +8,7 @@ import (
 	"time"
 )
 
-/**
-type Category struct {
-	Id     int
-	Name   string	`json:"cate"`
-	Topics []*Topic `json:"-" orm:"reverse(many)"`
-}
-
-type Topic struct {
-	Id       int
-	Title    string
-	Category *Category `orm:"rel(fk)"`
-	Labels   []*Label  `orm:"rel(m2m)"`
-}
-
-type Label struct {
-	Id     int
-	Name   string	`json:label`
-	Topics []*Topic `json:"-" orm:"reverse(many)"`
-}
-
-*/
-
+// topic info
 type Topic struct {
 	Id              int       `json:"id" orm:"column(id);auto"`
 	Uid             int64     `json:"uid" orm:"column(uid)"`
@@ -53,9 +32,6 @@ func (t *Topic) TableName() string {
 	return "topic"
 }
 
-//func init() {
-//	orm.RegisterModel(new(Topic))
-//}
 
 // AddTopic insert a new Topic into database and returns
 // last inserted Id on success.
@@ -77,9 +53,9 @@ func AddTopic(m *Topic) (id int64, err error) {
 	return id, err
 }
 
-// GetTopicById retrieves Topic by Id. Returns error if
+// GetTopicByID retrieves Topic by Id. Returns error if
 // Id doesn't exist
-func GetTopicById(id int) (v *Topic, err error) {
+func GetTopicByID(id int) (v *Topic, err error) {
 	o := orm.NewOrm()
 	v = &Topic{Id: id}
 	if err = o.Read(v); err == nil {
@@ -90,8 +66,8 @@ func GetTopicById(id int) (v *Topic, err error) {
 	return nil, err
 }
 
-//GetTopicsByCateId retrieves Topics by Category
-func GetTopicsByCateId(cateId int) ([]*Topic, error) {
+//GetTopicsByCateID retrieves Topics by Category
+func GetTopicsByCateID(cateId int) ([]*Topic, error) {
 	o := orm.NewOrm()
 	cate := &Category{Id: cateId}
 	var topics []*Topic
@@ -109,7 +85,7 @@ func GetTopicsByCateId(cateId int) ([]*Topic, error) {
 }
 
 //GetTopicsByTagId  retrieves Topics by Label
-func GetTopicsByLabelId(tagId int) ([]*Topic, error) {
+func GetTopicsByLabelID(tagId int) ([]*Topic, error) {
 	o := orm.NewOrm()
 	label := &Label{Id: tagId}
 	var topics []*Topic
@@ -121,9 +97,9 @@ func GetTopicsByLabelId(tagId int) ([]*Topic, error) {
 	return topics, err
 }
 
-// GetAllTopic retrieves all Topic matches certain condition. Returns empty list if
+// GetAllTopics retrieves all Topic matches certain condition. Returns empty list if
 // no records exist
-func GetAllTopic(query map[string]string, fields []string, sortby []string, order []string,
+func GetAllTopics(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) ([]*Topic, error) {
 	var err error
 	o := orm.NewOrm()
@@ -192,22 +168,6 @@ func GetAllTopic(query map[string]string, fields []string, sortby []string, orde
 				return nil, err
 			}
 		}
-
-		/*		if len(fields) == 0 {
-					for _, v := range topics {
-						ml = append(ml, v)
-					}
-				} else {
-					// trim unused fields
-					for _, v := range topics {
-						m := make(map[string]interface{})
-						val := reflect.ValueOf(v)
-						for _, fname := range fields {
-							m[fname] = val.FieldByName(fname).Interface()
-						}
-						ml = append(ml, m)
-					}
-				}*/
 		return topics, nil
 	}
 	return nil, err
@@ -215,7 +175,7 @@ func GetAllTopic(query map[string]string, fields []string, sortby []string, orde
 
 // UpdateTopic updates Topic by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateTopicById(m *Topic) (err error) {
+func UpdateTopicByID(m *Topic) (err error) {
 	o := orm.NewOrm()
 	v := Topic{Id: m.Id}
 	// ascertain id exists in the database

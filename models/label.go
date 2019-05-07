@@ -8,27 +8,6 @@ import (
 	"strings"
 )
 
-/**
-type Category struct {
-	Id     int
-	Name   string	`json:"cate"`
-	Topics []*Topic `json:"-" orm:"reverse(many)"`
-}
-
-type Topic struct {
-	Id       int
-	Title    string
-	Category *Category `orm:"rel(fk)"`
-	Labels   []*Label  `orm:"rel(m2m)"`
-}
-
-type Label struct {
-	Id     int
-	Name   string	`json:label`
-	Topics []*Topic `json:"-" orm:"reverse(many)"`
-}
-
-*/
 
 type Label struct {
 	Id          int      `json:"id"  orm:"column(id);auto"`
@@ -41,9 +20,6 @@ func (t *Label) TableName() string {
 	return "label"
 }
 
-//func init() {
-//	orm.RegisterModel(new(Label))
-//}
 
 // AddLabel insert a new Label into database and returns
 // last inserted Id on success.

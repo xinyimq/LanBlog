@@ -1,7 +1,7 @@
 package models
 
-import "github.com/astaxie/beego/orm"
 import (
+	"github.com/astaxie/beego/orm"
 	"fmt"
 	"github.com/astaxie/beego"
 	_ "github.com/go-sql-driver/mysql"

@@ -6,7 +6,6 @@ import (
 	"github.com/sinksmell/LanBlog/models"
 	"strconv"
 	"strings"
-
 	"github.com/astaxie/beego"
 )
 
@@ -62,7 +61,7 @@ func (c *TopicController) Create() {
 func (c *TopicController) GetOne() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
-	v, err := models.GetTopicById(id)
+	v, err := models.GetTopicByID(id)
 	if err != nil {
 		c.Data["json"] = err.Error()
 	} else {
@@ -125,7 +124,7 @@ func (c *TopicController) GetAll() {
 		}
 	}
 
-	l, err := models.GetAllTopic(query, fields, sortby, order, offset, limit)
+	l, err := models.GetAllTopics(query, fields, sortby, order, offset, limit)
 	if err != nil {
 		c.Data["json"] = err.Error()
 	} else {
@@ -145,7 +144,7 @@ func (c *TopicController) Update() {
 	result := models.NewCommResult()
 	v := models.Topic{}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if err := models.UpdateTopicById(&v); err == nil {
+		if err := models.UpdateTopicByID(&v); err == nil {
 			c.Ctx.Output.SetStatus(201)
 			result.Msg = "OK"
 		} else {
@@ -193,7 +192,7 @@ func (c *TopicController) GetByCate() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	//传入的 category id 是有效值的话才能查到正确结果
-	topics, err := models.GetTopicsByCateId(id)
+	topics, err := models.GetTopicsByCateID(id)
 	if err != nil {
 		result.Msg = err.Error()
 	} else {
@@ -216,7 +215,7 @@ func (c *TopicController) GetByLabel() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	//传入的 label id 是有效值的话才能查到正确结果
-	topics, err := models.GetTopicsByLabelId(id)
+	topics, err := models.GetTopicsByLabelID(id)
 	if err != nil {
 		result.Msg = err.Error()
 	} else {
